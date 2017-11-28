@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.colinries.eqsolver.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="25sp"
+            android:text="a="/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="25sp"
+            android:text="b="
+            android:layout_below="@id/textView"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="25sp"
+            android:text="c="
+            android:layout_below="@id/textView2" />
+
+        <EditText
+            android:id="@+id/inputA"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="25sp"
+            android:inputType="numberSigned|numberDecimal"
+            android:layout_toEndOf="@id/textView"
+            android:minWidth="150dp"/>
+
+        <EditText
+            android:id="@+id/inputB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:inputType="numberSigned|numberDecimal"
+            android:layout_toEndOf="@id/textView2"
+            android:layout_below="@id/inputA"
+            android:minWidth="150dp"/>
+
+        <EditText
+            android:id="@+id/inputC"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="25sp"
+            android:inputType="numberSigned|numberDecimal"
+            android:layout_toEndOf="@id/textView3"
+            android:layout_below="@id/inputB"
+            android:minWidth="150dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="searchRoots"
+            android:text="Calculate"
+            android:textSize="25sp"
+            android:layout_below="@id/inputC"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="x1="
+            android:textSize="25sp"
+            android:layout_below="@id/button" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="x2="
+            android:textSize="25sp"
+            android:layout_below="@id/textView4" />
+
+        <TextView
+            android:id="@+id/outputX1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="TextView"
+            android:textSize="25sp"
+            android:layout_below="@id/button"
+            android:layout_toEndOf="@id/textView4"
+            android:minWidth="150dp"/>
+
+        <TextView
+            android:id="@+id/outputX2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="TextView"
+            android:textSize="25sp"
+            android:layout_below="@id/outputX1"
+            android:layout_toEndOf="@id/textView5"
+            android:minWidth="150dp"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
