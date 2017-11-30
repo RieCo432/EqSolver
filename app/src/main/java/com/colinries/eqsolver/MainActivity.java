@@ -35,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Get the values for a, b and c from the respective EditText Fields
 
-        float a = Float.valueOf(inputA.getText().toString());
-        float b = Float.valueOf(inputB.getText().toString());
-        float c = Float.valueOf(inputC.getText().toString());
+        double a = Double.valueOf(inputA.getText().toString());
+        double b = Double.valueOf(inputB.getText().toString());
+        double c = Double.valueOf(inputC.getText().toString());
 
         // Calculate the discriminant (delta) using the classic formula
 
-        float discriminant = b*b - 4 * a * c;
+        double discriminant = b*b - 4 * a * c;
 
         // Make sure that the script only continues if it is a second degree equation (a =/= 0) and the discriminant is positive
 
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     .setMessage("The equation appears not to be a second degree equation, so only 1 root exists: x=" + Double.toString(roundN((c/b), 4)))
                     .show();
 
-            outputX1.setText(Double.toString(roundN((c/b), 4)));
+            outputX1.setText(Double.toString(roundN((-c/b), 4)));
             outputX2.setText("NaN");
 
         } else if (discriminant < 0) { // If the discriminant is negative, display a warning and set the root outputs to "NaN" (Not a Number)
